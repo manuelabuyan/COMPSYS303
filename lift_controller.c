@@ -150,6 +150,9 @@ void callButtons_remove(int floor, int down){
 	index = 2 * (floor - 1) + down;
 	callButtons[index] = 0;
 	
+	//Decrement callButtonPriority
+	callButtonPriority--;
+	
 	//Loops through the callButtons array and decrements all values by 1
 	for (i = 0; i < 8; i++) {
 		if (callButtons[i] == 0) {
@@ -157,7 +160,6 @@ void callButtons_remove(int floor, int down){
 		}
 		callButtons[i] == callButtons[i] - 1;
 	}
-	
 }
 
 
